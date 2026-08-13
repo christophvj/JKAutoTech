@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JK Auto Tech — Built to Keep You Moving</title>
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Page scroll progress -->
+    <div class="scroll-progress"><div class="scroll-progress-bar"></div></div>
+
+    <main>
+
+        <!-- Hero Section (Website Introduction)-->
+        <section id="hero">
+            <!-- Navigation -->
+            <nav class="navbar">
+                <!-- Company Logo -->
+                <div class="logo">
+                    <a href="#hero"><img src="images/logo_top.png" alt="JK Auto Tech logo"></a>
+                </div>
+
+                <!-- Navigation Links -->
+                <div class="navigation">
+                    <a href="#hero">HOME</a>
+                    <a href="#about">ABOUT</a>
+                    <a href="#services">SERVICES</a>
+                    <a href="#cta">WHY CHOOSE US</a>
+                    <a href="#request-service" class="nav-cta">BOOK A SERVICE</a>
+                </div>
+            </nav>
+
+            <!-- Hero Content -->
+             <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        <span class="hero-jk">
+                            <span class="hero-j">J</span><span class="hero-k">K</span>
+                        </span>
+                        <span class="hero-autotech">
+                            <span class="hero-auto">AUTO</span><span class="hero-tech">TECH</span>
+                        </span>
+                    </h1>
+
+                    <h2 class="hero-subheading">MECHANICAL WORK DONE RIGHT<span class="accent-dot">.</span></h2>
+                    <p class="hero-desc">Professional vehicle servicing, diagnostics, mechanical repairs and preventative maintenance — carried out by people who genuinely know cars.</p>
+
+                    <div class="hero-buttons">
+                        <button id="btnBookService" class="btnHero btnHero-primary tech-label" onclick="document.getElementById('request-service').scrollIntoView({behavior:'smooth'})">Book a Service</button>
+                        <button id="btnExploreServices" class="btnHero btnHero-secondary tech-label" onclick="document.getElementById('services').scrollIntoView({behavior:'smooth'})">Explore Our Services</button>
+                    </div>
+                </div>
+             </div>
+
+             <!-- Hero Background Image -->
+             <div class="hero-image-wrap">
+                <img src="images/hero-gtr.jpg" alt="Nissan GT-R on a mountain road at dusk" class="hero-image">
+             </div>
+        </section>
+
+
+        <!-- About Section -->
+        <section id="about">
+            <div class="blueprint-grid on-light"></div>
+
+            <!-- Left Side - Image -->
+            <div class="about-image" data-reveal>
+                <img src="images/svc-general.jpg" alt="Tools laid out on a workbench in the JK Auto Tech workshop">
+
+                <div class="company-name">JK AUTO TECH</div>
+            </div>
+
+            <!-- Right Side - Content -->
+            <div class="about-content reveal-stagger" data-reveal>
+                <span class="tech-label section-eyebrow">02 — About Us</span>
+                <h2>A Workshop Built On <span class="about-textAccent">Honest Work</span><span class="accent-dot">.</span></h2>
+
+                <p>We are a dedicated mechanical workshop focused on doing the job right the first time. From routine servicing to complex repairs, every vehicle is treated with the same care and attention to detail.</p>
+
+                <p>We believe in transparency: you'll know what's wrong, what it takes to fix it, and why — before any work begins. No surprises, no upselling, just reliable mechanical workmanship you can trust.</p>
+            </div>
+        </section>
+
+
+        <!-- Services Section -->
+        <section id="services">
+            <div class="blueprint-grid"></div>
+            <div class="glow-blob glow-blob-a"></div>
+            <div class="glow-blob glow-blob-b"></div>
+
+            <!-- Section Heading -->
+            <div class="services-header reveal-stagger" data-reveal>
+                <span class="tech-label section-eyebrow">03 — Services</span>
+                <h2>MECHANICAL WORK <span class="service-accentText">DONE PROPERLY</span><span class="accent-dot">.</span></h2>
+            </div>
+
+            <!-- Services Display -->
+            <div class="services-display reveal-stagger-tight" data-reveal>
+
+                <!-- Service Item -->
+                <button class="service active" data-index="0">
+                    <span class="service-img"><i class="fa-solid fa-wrench"></i></span>
+                    <span class="service-text tech-label">Vehicle Servicing</span>
+                </button>
+
+                <button class="service" data-index="1">
+                    <span class="service-img"><i class="fa-solid fa-magnifying-glass-chart"></i></span>
+                    <span class="service-text tech-label">Diagnostics</span>
+                </button>
+
+                <button class="service" data-index="2">
+                    <span class="service-img"><i class="fa-solid fa-gears"></i></span>
+                    <span class="service-text tech-label">Engine Repairs</span>
+                </button>
+
+                <button class="service" data-index="3">
+                    <span class="service-img"><i class="fa-solid fa-circle-dot"></i></span>
+                    <span class="service-text tech-label">Brake Systems</span>
+                </button>
+
+                <button class="service" data-index="4">
+                    <span class="service-img"><i class="fa-solid fa-car-side"></i></span>
+                    <span class="service-text tech-label">Suspension &amp; Steering</span>
+                </button>
+
+                <button class="service" data-index="5">
+                    <span class="service-img"><i class="fa-solid fa-temperature-half"></i></span>
+                    <span class="service-text tech-label">Cooling Systems</span>
+                </button>
+
+                <button class="service" data-index="6">
+                    <span class="service-img"><i class="fa-solid fa-bolt"></i></span>
+                    <span class="service-text tech-label">Electrical Fault Finding</span>
+                </button>
+
+                <button class="service" data-index="7">
+                    <span class="service-img"><i class="fa-solid fa-screwdriver-wrench"></i></span>
+                    <span class="service-text tech-label">General Repairs</span>
+                </button>
+
+            </div>
+
+            <div class="services-featured" data-reveal>
+
+                <button id="btnArrowLeft" class="service-arrow service-arrow-left" aria-label="Previous service"><i class="fa-solid fa-chevron-left"></i></button>
+                <button id="btnArrowRight" class="service-arrow service-arrow-right" aria-label="Next service"><i class="fa-solid fa-chevron-right"></i></button>
+
+                <div class="service-slider">
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-servicing.jpg" alt="Mechanic performing a vehicle service">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">01 / 08</span>
+                            <h1>Vehicle Servicing</h1>
+                            <p>
+                                Keep your vehicle running smoothly and reliably
+                                with professional servicing designed to maintain
+                                performance, safety and longevity.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-diagnostics.jpg" alt="Diagnostic tablet reading live vehicle data">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">02 / 08</span>
+                            <h1>Diagnostics</h1>
+                            <p>
+                                Advanced diagnostic testing to accurately identify
+                                faults and determine exactly what your vehicle needs.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-engine.jpg" alt="V8 engine on a workshop stand">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">03 / 08</span>
+                            <h1>Engine Repairs</h1>
+                            <p>
+                                Professional engine repairs and maintenance to
+                                restore performance, reliability and efficiency.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-brakes.jpg" alt="Brake discs, calipers and pads">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">04 / 08</span>
+                            <h1>Brake Systems</h1>
+                            <p>
+                                Complete brake system inspection, maintenance and
+                                repairs to keep your vehicle stopping safely.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-suspension.jpg" alt="Suspension coilovers and control arms">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">05 / 08</span>
+                            <h1>Suspension &amp; Steering</h1>
+                            <p>
+                                Suspension and steering repairs designed to improve
+                                handling, comfort, stability and road safety.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-cooling.jpg" alt="Coolant being poured into a radiator">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">06 / 08</span>
+                            <h1>Cooling Systems</h1>
+                            <p>
+                                Cooling system inspection and repairs to help prevent
+                                overheating and protect your engine.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-electrical.jpg" alt="Electrical fault finding equipment">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">07 / 08</span>
+                            <h1>Electrical Fault Finding</h1>
+                            <p>
+                                Accurate electrical fault finding to identify and
+                                resolve issues with your vehicle's electrical systems.
+                            </p>
+                        </div>
+                    </article>
+
+                    <article class="active-service">
+                        <div class="activeServiceBg">
+                            <img src="images/svc-general.jpg" alt="Tools laid out ready for a general repair">
+                        </div>
+
+                        <div class="active-serviceContent">
+                            <span class="service-number tech-label">08 / 08</span>
+                            <h1>General Repairs</h1>
+                            <p>
+                                Reliable mechanical repairs for a wide range of
+                                vehicle problems, from minor issues to major repairs.
+                            </p>
+                        </div>
+                    </article>
+                </div>
+
+                <div class="service-progress">
+                    <div class="service-progress-bar"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Call To Action Section -->
+        <section id="cta">
+            <!-- Section Background-->
+            <div class="cta-background-wrap">
+                <img class="cta-background" src="images/hero-gtr.jpg" alt="Nissan GT-R on a mountain road">
+            </div>
+
+            <!-- Text content -->
+            <div class="cta-content reveal-stagger" data-reveal>
+                <span class="tech-label section-eyebrow">04 — Why Choose Us</span>
+                <h2>Your Car Deserves The <span class="cta-accentText">Right Care</span><span class="accent-dot">.</span></h2>
+
+                <!-- Button Section -->
+                <button id="ctaBook" class="btnHero btnHero-primary tech-label" onclick="document.getElementById('request-service').scrollIntoView({behavior:'smooth'})">Book a Service</button>
+            </div>
+        </section>
+
+
+
+        <section id="request-service">
+            <div class="blueprint-grid on-light"></div>
+
+            <!-- Section Heading -->
+            <div class="request-service-header reveal-stagger" data-reveal>
+                <span class="tech-label section-eyebrow">05 — Book Now</span>
+                <h2>Request a <span class="service-textAccent">Service</span><span class="service-accent-dot">.</span></h2>
+            </div>
+
+            <!-- Request Form -->
+             <div class="request-service-container" data-reveal>
+
+                <form action="#" method="post">
+
+                    <!-- Customer Information -->
+                    <fieldset class="form-section">
+                        <legend class="tech-label">Customer Information</legend>
+
+                        <div class="form-row form-row-3">
+
+                            <div class="form-field">
+                                <label for="full-name">Full Name</label>
+                                <input
+                                    type="text"
+                                    id="full-name"
+                                    name="full_name"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+                            </div>
+
+
+                            <div class="form-field">
+                                <label for="email">Email</label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    name="email"
+                                    placeholder="Enter your email address"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="cell">Cell Number</label>
+                                <input
+                                    type="tel"
+                                    id="cell"
+                                    name="cell"
+                                    placeholder="Enter your cell number"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                    <!-- Vehicle Information -->
+                    <fieldset class="form-section">
+                        <legend class="tech-label">Vehicle Information</legend>
+
+                        <div class="form-row form-row-4">
+
+                            <div class="form-field">
+                                <label for="make">Make</label>
+                                <input
+                                    type="text"
+                                    id="make"
+                                    name="make"
+                                    placeholder="Enter vehicle make"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="model">Model</label>
+                                <input
+                                    type="text"
+                                    id="model"
+                                    name="model"
+                                    placeholder="Enter vehicle model"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="year">Year</label>
+                                <input
+                                    type="number"
+                                    id="year"
+                                    name="year"
+                                    placeholder="Enter vehicle year"
+                                    required
+                                >
+                            </div>
+
+                            <div class="form-field">
+                                <label for="registration">Registration</label>
+                                <input
+                                    type="text"
+                                    id="registration"
+                                    name="registration"
+                                    placeholder="Enter vehicle registration"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                    <!-- Service Information -->
+                    <fieldset class="form-section">
+                        <legend class="tech-label">Service Information</legend>
+
+                        <div class="form-row form-row-2">
+
+                            <div class="form-field">
+                                <label for="service-required">Service Required</label>
+
+                                <select
+                                    id="service-required"
+                                    name="service_required"
+                                    required
+                                >
+                                    <option value="">Select a service</option>
+                                    <option value="servicing">Vehicle Servicing</option>
+                                    <option value="diagnostics">Diagnostics</option>
+                                    <option value="engine">Engine Repairs</option>
+                                    <option value="brakes">Brake Systems</option>
+                                    <option value="suspension">Suspension &amp; Steering</option>
+                                    <option value="cooling">Cooling Systems</option>
+                                    <option value="electrical">Electrical Fault Finding</option>
+                                    <option value="general">General Repairs</option>
+                                </select>
+                            </div>
+
+                            <div class="form-field">
+                                <label for="service-date">Preferred Service Date</label>
+
+                                <input
+                                    type="date"
+                                    id="service-date"
+                                    name="service_date"
+                                    required
+                                >
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+
+                    <!-- Additional Information -->
+                    <fieldset class="form-section">
+                        <legend class="tech-label">Additional Information</legend>
+
+                        <div class="form-row">
+
+                            <div class="form-field form-field-full">
+                                <label for="additional-information">
+                                    Additional Information
+                                </label>
+
+                                <textarea
+                                    id="additional-information"
+                                    name="additional_information"
+                                    rows="6"
+                                    placeholder="Enter any additional information..."
+                                ></textarea>
+                            </div>
+
+                        </div>
+                    </fieldset>
+
+                    <!-- Submit Button -->
+                    <div class="form-submit">
+                        <button type="submit" class="btnHero btnHero-primary tech-label">Request Service</button>
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+
+        <!-- Show location -->
+        <section id="location">
+            <div class="blueprint-grid on-light"></div>
+            <div class="location-content" data-reveal>
+                <div class="location-map">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11660.47958645985!2d26.708057177300727!3d-30.68662876135684!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x1e8913a5b9f4c4b1%3A0x21f99614dfe8bbfb!2sJK%20Auto%20Tech!5e1!3m2!1sen!2sza!4v1786568984022!5m2!1sen!2sza"
+                        width="600"
+                        height="450"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="strict-origin-when-cross-origin">
+                    </iframe>
+                </div>
+            </div>
+        </section>
+
+        <footer id="footer">
+            <div class="footer-top">
+
+                <div class="footer-logo">
+                    <img src="images/logo_top.png" alt="JK Auto Tech logo">
+                    <p>Built to keep you moving. Honest mechanical work, done right the first time.</p>
+                </div>
+
+                <div class="footer-columns">
+
+                    <div class="footer-col footer-links">
+                        <h3 class="tech-label">Quick Links</h3>
+                        <a href="#about">About</a>
+                        <a href="#services">Services</a>
+                        <a href="#cta">Why Choose Us</a>
+                        <a href="#request-service">Book a Service</a>
+                    </div>
+
+                    <div class="footer-col footer-social">
+                        <h3 class="tech-label">Follow Us</h3>
+                        <a href="#"><i class="fa-brands fa-facebook-f"></i> Facebook</a>
+                        <a href="#"><i class="fa-brands fa-instagram"></i> Instagram</a>
+                        <a href="#"><i class="fa-brands fa-whatsapp"></i> WhatsApp</a>
+                    </div>
+
+                    <div class="footer-col footer-contact">
+                        <h3 class="tech-label">Contact Us</h3>
+                        <a href="tel:+27000000000"><i class="fa-solid fa-phone"></i> 000 000 0000</a>
+                        <a href="mailto:info@jkautotech.co.za"><i class="fa-solid fa-envelope"></i> info@jkautotech.co.za</a>
+                        <span><i class="fa-solid fa-location-dot"></i> Kroonstad, Free State</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 JK Auto Tech. All rights reserved.</p>
+            </div>
+        </footer>
+
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
