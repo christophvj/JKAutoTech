@@ -129,18 +129,7 @@ h1, h2, h3, h4{
     linear-gradient(90deg, oklch(0.18 0.03 258 / 0.06) 1px, transparent 1px);
 }
 
-.glow-blob{
-  position: absolute;
-  width: 620px;
-  height: 620px;
-  border-radius: 50%;
-  background: var(--primary);
-  opacity: 0.25;
-  filter: blur(140px);
-  pointer-events: none;
-}
-.glow-blob-a{ top: -160px; left: -160px; }
-.glow-blob-b{ bottom: -220px; right: -160px; background: var(--accent); opacity: 0.15; }
+
 
 /* Scroll-triggered reveal */
 [data-reveal]{
@@ -578,7 +567,7 @@ h1, h2, h3, h4{
   position: relative;
   flex: 0 0 100%;
   scroll-snap-align: start;
-  height: clamp(360px, 52vw, 540px);
+  height: clamp(460px, 52vw, 540px);
   border-radius: var(--radius);
   overflow: hidden;
 }
@@ -622,7 +611,7 @@ h1, h2, h3, h4{
    ========================================================================== */
 #cta{
   position: relative;
-  min-height: 62vh;
+  min-height: 72vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -636,7 +625,7 @@ h1, h2, h3, h4{
   position: absolute;
   inset: 0;
   z-index: -1;
-  background: linear-gradient(180deg, oklch(0.13 0.04 258 / 0.75), oklch(0.13 0.04 258 / 0.88));
+  background: linear-gradient(180deg, oklch(0.13 0.04 258 / 0.50), oklch(0.13 0.04 258 / 0.88));
 }
 
 .cta-content{
@@ -835,4 +824,24 @@ h1, h2, h3, h4{
   .hero-buttons{ flex-direction: column; align-items: stretch; }
   .footer-columns{ grid-template-columns: 1fr; }
   .service-arrow{ width: 40px; height: 40px; font-size: 0.85rem; }
+
+  /* Stronger, more even scrim behind the text on mobile */
+  #hero::before{
+    background:
+      linear-gradient(180deg, oklch(0.13 0.04 258 / 0.55) 0%, oklch(0.13 0.04 258 / 0.45) 45%, oklch(0.13 0.04 258 / 0.85) 100%),
+      linear-gradient(90deg, oklch(0.13 0.04 258 / 0.6) 0%, oklch(0.13 0.04 258 / 0.1) 60%);
+  }
+
+  /* Give the text its own contrast anchor, same visual language as the logo block */
+  .hero-subheading,
+  .hero-desc{
+    display: inline-block;
+    background: oklch(0.13 0.04 258 / 0.55);
+    backdrop-filter: blur(4px);
+    padding: 0.5em 0.7em;
+    border-radius: 4px;
+  }
+
+  .hero-subheading{ display: block; }
+  .hero-desc{ display: block; }
 }

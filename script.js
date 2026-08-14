@@ -97,7 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (!slider || !slides.length) return;
     current = (index + slides.length) % slides.length;
     isSyncingFromScroll = true;
-    slider.scrollTo({ left: current * slider.clientWidth, behavior: 'smooth' });
+    slider.scrollTo({ left: slides[current].offsetLeft, behavior: 'smooth' });
     syncActiveState(current);
     window.setTimeout(() => { isSyncingFromScroll = false; }, 500);
   }
@@ -127,17 +127,23 @@ document.addEventListener('DOMContentLoaded', () => {
       if (isSyncingFromScroll) return;
       clearTimeout(scrollDebounce);
       scrollDebounce = setTimeout(() => {
-        const idx = Math.round(slider.scrollLeft / slider.clientWidth);
-        if (idx !== current && idx >= 0 && idx < slides.length) {
+        let idx = 0;
+        let closest = Infinity;
+        slides.forEach((slide, i) => {
+          const dist = Math.abs(slide.offsetLeft - slider.scrollLeft);
+          if (dist < closest) { closest = dist; idx = i; }
+        });
+        if (idx !== current) {
           current = idx;
           syncActiveState(current);
         }
       }, 120);
     }, { passive: true });
 
+    // resize — same fix
     window.addEventListener('resize', () => {
-      slider.scrollTo({ left: current * slider.clientWidth });
-    });
+      slider.scrollTo({ left: slides[current].offsetLeft });
+  });
 
     syncActiveState(current);
     restartAutoplay();
